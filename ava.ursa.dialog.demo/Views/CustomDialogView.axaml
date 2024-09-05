@@ -1,0 +1,48 @@
+<UserControl
+    Height="300"
+    Width="400"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    mc:Ignorable="d"
+    x:Class="ava.ursa.dialog.demo.Views.CustomDialogView"
+    x:DataType="viewModels:CustomDialogViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:u="https://irihi.tech/ursa"
+    xmlns:viewModels="clr-namespace:ava.ursa.dialog.demo.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.DataContext>
+        <viewModels:CustomDialogViewModel />
+    </Design.DataContext>
+
+    <StackPanel Spacing="50">
+        <DockPanel
+            Background="DodgerBlue"
+            LastChildFill="True"
+            u:DialogControlBase.CanDragMove="True">
+            <Button
+                Background="OrangeRed"
+                Command="{Binding CancelCommand}"
+                Content="X"
+                DockPanel.Dock="Right"
+                FontSize="20"
+                Foreground="White"
+                Height="40"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Width="40" />
+            <TextBlock
+                Margin="15,0"
+                Text="This is a custom dialog"
+                VerticalAlignment="Center" />
+        </DockPanel>
+
+        <Button
+            Background="Green"
+            Command="{Binding CancelCommand}"
+            Foreground="White">
+            cancel
+        </Button>
+    </StackPanel>
+</UserControl>
