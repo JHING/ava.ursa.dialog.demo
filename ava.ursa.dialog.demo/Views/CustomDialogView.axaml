@@ -20,7 +20,8 @@
         <DockPanel
             Background="DodgerBlue"
             LastChildFill="True"
-            u:DialogControlBase.CanDragMove="True">
+            u:DialogControlBase.CanDragMove="True"
+            x:Name="PART_Title">
             <Button
                 Background="OrangeRed"
                 Command="{Binding CancelCommand}"

@@ -14,7 +14,8 @@ public partial class MainWindowViewModel : ViewModelBase
             new CustomDialogViewModel(),
             options: new DialogOptions
             {
-                IsCloseButtonVisible = false
+                IsCloseButtonVisible = false,
+                CanDragMove = false
             });
     }
 
